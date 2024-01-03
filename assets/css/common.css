@@ -60,7 +60,6 @@ ul li {
 
 /* 2,3個目のセクションにかかる(1個目はAboutのvisual) */
 section:not(:nth-child(1)) {
-  max-width: 1080px;
   width: 100%;
   margin: 0 auto;
 }
@@ -192,18 +191,16 @@ article h1 {
   content: "";
   background-image: url(../image/background1.png);
   width: 100%;
-  height: 200%;
   aspect-ratio: 2/1;
   position: absolute;
   top: 0;
   z-index: -1;
-  background-size: 130%;
-  background-position: 0 2%;
 }
 
 .quality-contents {
   display: flex;
   margin: 10rem auto;
+  max-width: 1080px;
 }
 
 .quality-contents-img {
