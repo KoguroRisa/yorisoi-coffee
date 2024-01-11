@@ -9,7 +9,9 @@
   <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
   <link rel="stylesheet" href="assets/js/slick-1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="assets/js/slick-1.8.1/slick/slick-theme.css" />
+  <!-- <link rel="stylesheet" href="assets/css/common.css" /> -->
   <link rel="stylesheet" href="https://kogurorisa.github.io/yorisoi-coffee/assets/css/common.css" />
+
   <link
     href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Klee+One&display=swap"
     rel="stylesheet">
@@ -82,7 +84,7 @@
       </section>
 
       <!--取り扱い商品-->
-      <div class="product">
+      <div class="whiteframe">
         <section class="product-gallery">
           <h1 id="product-gallery">取り扱い商品</h1>
           <!--商品一覧-->
@@ -159,10 +161,14 @@
               <p>焙煎士が教える！</p>
               <p>あなたにぴったりのコーヒーの選び方</p>
             </hgroup>
-            <p>
-              コーヒーに興味があるけど好みの味が分からない…という方にも分かりやすく、<br>日々のシーンや気分に合わせた「あなたにぴったりの一杯」を<br>
-              経験豊かな焙煎士がご案内いたします。
-            </p>
+            <div>
+              <img src="assets/image/women.png" alt="">
+              <p>
+                コーヒーに興味があるけど好みの味が分からない…という方にも分かりやすく、<br>日々のシーンや気分に合わせた<span>「あなたにぴったりの一杯」</span>を<br>
+                経験豊かな焙煎士がご案内いたします。
+              </p>
+            </div>
+
           </div>
         </section>
       </div>
@@ -190,71 +196,82 @@
       </section>
 
       <!--ニュース-->
-      <h1 id="news">News</h1>
-      <section class="news">
-        <ul class="">
-          <!--ニュースアイテムここから-->
-          <li class="news-item">
-            <div class="news-item-textarea">
-              <div>
-                <p class="-date">2023.06.02</p>
-                <p>台風3号に伴う営業時間変更のお知らせ</p>
-              </div>
-              <div>
-                <img src="assets/image/next.png" alt="">
-              </div>
-            </div>
-          </li>
-          <li class="news-item">
-            <div class="news-item-textarea">
-              <div>
-                <p class="-date">2023.05.14</p>
-                <p>ホームページをリニューアルしました。</p>
-              </div>
-              <div>
-                <img src="assets/image/next.png" alt="">
-              </div>
-            </div>
-          </li>
-          <!--ニュースアイテムここまで-->
-        </ul>
-        <div class="button-wrap button-center">
-          <a href="https://www.jorganic-coffee.jp/blog" class="-link">詳しくみる</a>
-        </div>
-      </section>
+      <div class="news-contents">
+        <h1 id="news">お知らせ</h1>
+        <section class="news">
 
-      <!--店舗情報-->
-      <h2 id="shop">店舗情報</h2>
-      <section class="shop">
-        <div class="shop-contents">
-          <dl class="shop-contents-list">
-            <p class="c-title">YORISOI COFFEE 本店</p>
-            <div class="-item">
-              <dt class="-head">営業時間</dt>
-              <dd class="-desc">9:00~18:00</dd>
-            </div>
-            <div class="-item">
-              <dt class="-head">定休日</dt>
-              <dd class="-desc">火曜日</dd>
-            </div>
-            <div class="-item">
-              <dt class="-head">アクセス</dt>
-              <dd class="-desc">東京都きらり区<br>ながれぼしビル1F</dd>
-            </div>
-            <div class="-item">
-              <dt class="-head">お問い合わせ</dt>
-              <dd class="-desc">000-111-2222</dd>
-            </div>
-            <div class="-item">
-              <dt class="-head"></dt>
-              <dd class="-desc" style="font-size: 1.4rem;">※混雑時など、電話に出られない場合がございます。<br>ご了承くださいませ。</dd>
-            </div>
-          </dl>
-          <div class="shop-contents-img">
-            <img src="assets/image/shop.png" alt=""></img>
+          <ul class="">
+            <!--ニュースアイテムここから-->
+            <li class="news-item">
+              <div class="news-item-textarea">
+                <div>
+                  <p class="-date">2023.06.02</p>
+                  <p>台風3号に伴う営業時間変更のお知らせ</p>
+                </div>
+                <div>
+                  <img src="assets/image/next.png" alt="">
+                </div>
+              </div>
+            </li>
+            <li class="news-item">
+              <div class="news-item-textarea">
+                <div>
+                  <p class="-date">2023.05.14</p>
+                  <p>ホームページをリニューアルしました。</p>
+                </div>
+                <div>
+                  <img src="assets/image/next.png" alt="">
+                </div>
+              </div>
+            </li>
+            <!--ニュースアイテムここまで-->
+          </ul>
+
+          <div class="button-wrap button-center">
+            <a href="https://www.jorganic-coffee.jp/blog" class="-link">詳しくみる</a>
           </div>
-        </div>
-      </section>
+
+        </section>
+      </div>
+      <!--店舗情報-->
+      <div class="whiteframe">
+        <h1 id="shop">店舗情報</h1>
+        <section class="shop">
+          <div class="shop-contents">
+            <dl class="shop-contents-list">
+              <p class="c-title">YORISOI COFFEE 本店</p>
+              <div class="-item">
+                <dt class="-head">営業時間</dt>
+                <dd class="-desc">9:00~18:00</dd>
+              </div>
+              <div class="-item">
+                <dt class="-head">定休日</dt>
+                <dd class="-desc">火曜日</dd>
+              </div>
+              <div class="-item">
+                <dt class="-head">アクセス</dt>
+                <dd class="-desc">東京都きらり区<br>ながれぼしビル1F</dd>
+              </div>
+              <div class="-item">
+                <dt class="-head"></dt>
+                <dd class="-desc"><a href="https://maps.app.goo.gl/Gsui4uMKkyViJ88g9"
+                    style="border-bottom: 1px solid #4e4b49;">Google map</a></dd>
+              </div>
+              <div class="-item">
+                <dt class="-head">お問い合わせ</dt>
+                <dd class="-desc">000-111-2222</dd>
+              </div>
+              <div class="-item">
+                <dt class="-head"></dt>
+                <dd class="-desc" style="font-size: 1.4rem;">※混雑時など、電話に出られない場合がございます。<br>ご了承くださいませ。</dd>
+              </div>
+            </dl>
+            <div class="shop-contents-img">
+              <img src="assets/image/shop.png" alt=""></img>
+            </div>
+          </div>
+        </section>
+      </div>
     </article>
   </main>
 
@@ -307,7 +324,7 @@
   </footer>
 
   <!-- TOPへ戻るボタン -->
-  <div class="pagetop"><a href="#">TOP</a></div>
+  <div class="pagetop"><a href="#">menu</a></div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script type="text/javascript" src="assets/js/slick-1.8.1/slick/slick.js"></script>
