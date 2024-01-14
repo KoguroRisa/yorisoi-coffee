@@ -35,6 +35,19 @@
     </nav>
   </header>
 
+  <nav id="g-nav">
+    <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+      <ul>
+        <li><a href="#quality">こだわり</a></li>
+        <li><a href="#product">取り扱い商品</a></li>
+        <li><a href="#voice">お客様の声</a></li>
+        <li><a href="#news">お知らせ</a></li>
+        <li><a href="#shop">店舗情報</a></li>
+      </ul>
+      <div class="close_btn">close</div>
+    </div>
+  </nav>
+
   <main>
     <!-- LivingStandard対応 -->
     <article>
@@ -85,13 +98,13 @@
 
       <!--取り扱い商品-->
       <div class="whiteframe">
-        <section class="product-gallery">
-          <h1 id="product-gallery">取り扱い商品</h1>
+        <section class="product">
+          <h1 id="product">取り扱い商品</h1>
           <!--商品一覧-->
-          <div class="product-gallery-items">
+          <div class="product-items">
             <ul class="autoplay">
               <!--商品ここから-->
-              <li class="product-gallery-item">
+              <li class="product-item">
                 <div class="-caption-area" style="background: linear-gradient(27deg, #b3aaa2 0%, #b3aaa2 100%);">
                   <div class="-num">03</div>
                   <span class="-name">blend</span>
@@ -103,7 +116,7 @@
               </li>
               <!--商品ここまで-->
               <!--商品ここから-->
-              <li class="product-gallery-item">
+              <li class="product-item">
                 <div class="-caption-area" style="background: linear-gradient(27deg, #a69c93 0%, #a69c93 100%);">
                   <div class="-num">04</div>
                   <span class="-name">blend</span>
@@ -116,7 +129,7 @@
               </li>
               <!--商品ここまで-->
               <!--商品ここから-->
-              <li class="product-gallery-item">
+              <li class="product-item">
                 <div class="-caption-area" style="background: linear-gradient(27deg, #66635F 0%, #66635F 100%);">
                   <div class="-num">05</div>
                   <span class="-name">blend</span>
@@ -128,7 +141,7 @@
               </li>
               <!--商品ここまで-->
               <!--商品ここから-->
-              <li class="product-gallery-item">
+              <li class="product-item">
                 <div class="-caption-area" style="background: linear-gradient(27deg, #A79C8E 0%, #A79C8E 100%);">
                   <div class="-num">01</div>
                   <span class="-name">blend</span>
@@ -140,7 +153,7 @@
               </li>
               <!--商品ここまで-->
               <!--商品ここから-->
-              <li class="product-gallery-item">
+              <li class="product-item">
                 <div class="-caption-area" style="background: linear-gradient(27deg, #C9C1B9 0%, #C9C1B9 100%);">
                   <div class="-num">02</div>
                   <span class="-name">blend</span>
@@ -323,8 +336,8 @@
     </nav>
   </footer>
 
-  <!-- TOPへ戻るボタン -->
-  <div class="pagetop"><a href="#">menu</a></div>
+  <!-- menuボタン -->
+  <div class="pagemenu">menu</div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script type="text/javascript" src="assets/js/slick-1.8.1/slick/slick.js"></script>

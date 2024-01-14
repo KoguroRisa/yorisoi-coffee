@@ -9,20 +9,44 @@ $(function () {
     dots: true,
   });
 
-  //TOPへ戻るボタン表示
-  //TODO: 複数使用するものは変数使用した方が良いのか？
-  const pagetop = $('.pagetop');
-  pagetop.hide();
+  //menuボタン表示
+  const pagemenu = $('.pagemenu');
+  pagemenu.hide();
 
   $(window).scroll(function () {
 
     if ($(window).scrollTop() > 100) {
-      pagetop.fadeIn();
+      pagemenu.fadeIn();
     }
     else {
-      pagetop.fadeOut();
+      pagemenu.fadeOut();
 
     }
+  });
+
+  //TOPへ戻るボタンクリック
+  // $('.pagetop').click(function () {
+  //   $("body,html").animate({
+  //     scrollTop: 0,
+  //   }, 800);
+
+  //   //親要素に伝播させない
+  //   return false;
+  // });
+  $('.pagemenu').click(function () {
+
+    $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
+    $("#header,#container").toggleClass('mainblur');//ぼかしたいエリアにmainblurクラスを付与
+  });
+
+  $("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+    $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスを除去し
+    $("#header,#container").removeClass('mainblur');//ぼかしているエリアのmainblurクラスを除去
+  });
+
+  $(".close_btn").click(function () {//ナビゲーションのリンクがクリックされたら
+    $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスを除去し
+    $("#header,#container").removeClass('mainblur');//ぼかしているエリアのmainblurクラスを除去
   });
 
   //モーダル非表示（初期）
@@ -54,6 +78,7 @@ $(function () {
     const href = $(this).attr("href");
     //空白の場合はリンク先をhtmlに設定
     const target = $(href == "#" || href == "" ? 'html' : href);
+    // const target = href;
     const position = target.offset().top;
     $("html,body").animate({ scrollTop: position },
       500, "swing");
@@ -78,16 +103,6 @@ $(function () {
     })
 
   });
-});
-
-//TOPへ戻るボタンクリック
-$('.pagetop').click(function () {
-  $("body,html").animate({
-    scrollTop: 0,
-  }, 800);
-
-  //親要素に伝播させない
-  return false;
 });
 
 $('a').hover(
