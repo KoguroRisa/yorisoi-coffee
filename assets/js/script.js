@@ -7,6 +7,15 @@ $(function () {
     autoplay: true,
     autoplaySpeed: 2000,
     dots: true,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
 
   //menuボタン表示
@@ -14,13 +23,13 @@ $(function () {
   pagemenu.hide();
 
   $(window).scroll(function () {
-
-    if ($(window).scrollTop() > 100) {
-      pagemenu.fadeIn();
-    }
-    else {
-      pagemenu.fadeOut();
-
+    if (window.matchMedia("(min-width:768px)")) {
+      if ($(window).scrollTop() > 100) {
+        pagemenu.fadeIn();
+      }
+      else {
+        pagemenu.fadeOut();
+      }
     }
   });
 
