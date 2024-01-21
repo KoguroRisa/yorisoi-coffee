@@ -199,7 +199,7 @@ article h1 {
 
 .concept-contents-img {
   width: 38rem;
-  z-index: 10;
+  z-index: 2;
   display: flex;
   align-items: center;
 }
@@ -283,7 +283,9 @@ article h1 {
 
 .quality-contents-text {
   margin: 0 10vw;
-  z-index: 10;
+  z-index: 2;
+  position: relative;
+
 }
 
 .quality-contents-text div {
@@ -303,6 +305,7 @@ article h1 {
   height: 90%;
   background: #E1D8CE;
   position: absolute;
+  z-index: 1;
 }
 
 /* 取り扱い商品 */
@@ -507,6 +510,12 @@ article h1 {
   color: #fff;
 }
 
+.news-item-textarea div>p {
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+
 .button-center {
   margin: 10rem auto;
 }
@@ -616,6 +625,7 @@ footer p {
   padding: 28px 20px;
   text-align: center;
   color: white;
+  z-index: 9999;
 }
 
 /*========= ぼかしのためのCSS ===============*/
@@ -731,17 +741,26 @@ footer p {
   }
 
   p {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .header-logo img {
-    width: 200px;
+    width: 180px;
     flex-shrink: 0;
   }
 
   .header h1 {
     margin: 0 1rem;
   }
+
+  .top-visual-right {
+    font-size: 3.5vw;
+    /* position: absolute; */
+    left: 2rem;
+    top: 7rem;
+    text-align: left;
+  }
+
 
   .concept-contents-img {
     display: none;
@@ -761,6 +780,23 @@ footer p {
     height: 30rem;
   }
 
+  .whiteframe {
+    border-radius: 2rem;
+    width: 90vw;
+  }
+
+  #product {
+    margin: 2rem 3rem;
+  }
+
+  .slick-list {
+    margin-right: 2.4rem;
+  }
+
+  #tasteguide {
+    font-size: 2.6rem;
+  }
+
   .tasteguide-text hgroup p:nth-child(1) {
     font-size: 1.4rem;
   }
@@ -770,16 +806,21 @@ footer p {
   }
 
   .tasteguide-text>div {
-    display: block;
+    display: flex;
+    /* イラストと文字の順番入れ替え */
+    flex-direction: column;
   }
 
   .tasteguide-text>div img {
-    width: 70%;
-    object-fit: cover;
+    width: 50%;
+    order: 2;
+    margin: 0 auto;
   }
 
   .tasteguide-text>div p {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    order: 1;
+    text-align: center;
   }
 
   .voice-top {
@@ -793,6 +834,44 @@ footer p {
 
   .voice-contents-wrap {
     display: block;
+    margin-right: 8vw;
+  }
+
+  .-text-area p:nth-child(1) {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    text-align: left;
+  }
+
+  .-text-area p:nth-child(2) {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+  }
+
+  #news {
+    margin: 5rem 4rem 1rem;
+  }
+
+  .news-item-textarea {
+    justify-content: space-between;
+    align-items: flex-end;
+    display: flex;
+  }
+
+  .news-item-textarea div>p {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+
+  .news-item-textarea div>a {
+
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  #shop {
+    margin: 2rem 3rem;
   }
 
   .shop-contents {
@@ -804,13 +883,54 @@ footer p {
     width: 100%;
   }
 
+  .c-title {
+    text-align: left;
+    font-size: 1.6rem;
+  }
+
+  .-item {
+    display: flex;
+    margin: 2rem 0;
+    font-size: 1.4rem;
+    text-align: left;
+  }
+
+  .-head {
+    width: 30%;
+  }
+
   .shop-contents-img {
     width: 24rem;
-    width: 100%;
+    width: 90%;
     margin: 0 auto 4rem;
+  }
+
+  .shop-contents-img img {
+    border-radius: 2.2rem;
+    box-shadow: 1rem 1rem 0 0 #EFE8E4;
   }
 
   .footer-menu {
     display: block;
+  }
+
+  .footer-menu-logo {
+    max-width: 30rem;
+    width: 60%;
+    margin: 2rem auto;
+  }
+
+  .footer-menu-info li {
+    display: block;
+    margin-right: 4rem;
+    font-size: 1.6rem;
+  }
+
+  footer p {
+    font-size: 1.8rem;
+  }
+
+  .copy {
+    font-size: 1rem;
   }
 }
