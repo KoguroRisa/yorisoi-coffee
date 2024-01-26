@@ -125,5 +125,19 @@ $('a').hover(
   }
 );
 
+//ボタン：マウスオーバーしたときの色を指定
+$(".button-wrap").on("mouseover", function () {
+  $(".button-wrap").css({
+    backgroundColor: "#E8DCD4"
+  });
+});
+
+//マウスアウトしたときに元の色に戻る
+$(".button-wrap").on("mouseout", function () {
+  $(".button-wrap").css({
+    backgroundColor: "#C9C1B9"
+  });
+});
+
 
 
